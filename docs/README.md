@@ -1,6 +1,6 @@
-# Headline
+# 二驴日志
 
-> An awesome project.
+> 记录读书笔记，美食、风景图片。
 
 
 
