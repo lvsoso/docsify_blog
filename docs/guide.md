@@ -24,7 +24,27 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted 
 ```
 
 
-### git 
+### Git 
+
+##### 提交代码
+
+```shell
+echo "# rustbook" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/lvsoso/rustbook.git
+git push -u origin main
+```
+
+```shell
+git remote add origin https://github.com/lvsoso/rustbook.git
+git branch -M main
+git push -u origin main
+```
+
+
 
 ##### 缓存密码
 
@@ -55,7 +75,7 @@ username = zzz
 
 
 
-#### node js
+#### Node js
 
 ##### 配置
 
@@ -97,6 +117,33 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
+Docker安装（CentOS8.2）
+
+[官方文档](https://docs.docker.com/engine/install/centos/)
+
+```shell
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+
+sudo yum install -y yum-utils
+
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+    
+sudo yum install -y  docker-ce docker-ce-cli containerd.io
+
+
+```
+
+
+
 ### Proxychain-ng
 
 ```shell
@@ -108,14 +155,14 @@ sudo make install
 sudo make install-config
 ```
 
-### docsify
+### Docsify
 
 ```shell
 docker build -f Dockerfile -t docsify/demo .
 docker run -itdp 3000:3000 --restart=always --name=docsify -v $(pwd):/docs docsify/demo
 ```
 
-### kedconnect
+### Kedconnect
 
 https://community.kde.org/KDEConnect#Linux_Desktop
 
@@ -123,3 +170,6 @@ https://community.kde.org/KDEConnect#Linux_Desktop
 
 ```
 
+### AppImageLauncher
+
+https://github.com/TheAssassin/AppImageLauncher
