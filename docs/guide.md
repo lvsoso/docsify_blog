@@ -51,19 +51,25 @@ git push -u origin main
 ```shell
 vim ~/.gitconfig
 
-[credential "http://10.0.0.20:3680"]
-username = wuqz
+[credential "http://1.2.3.4:5678"]
+username = xxx
 
-[credential "https://github.com/lvoooo"]
-username = lvoooo
+[credential "https://github.com/yyy"]
+username = yyy
 
-[credential "https://github.com/lvsoso"]
-username = lvsoso
+[credential "https://github.com/zzz"]
+username = zzz
 
 
 [credential]
     helper = cache --timeout 86400
     helper = store --file ~/.git-credentials
+
+[alias]
+    co = checkout                                       
+    br = branch                                         
+    ci = commit                                         
+    st = status
 
 ```
 

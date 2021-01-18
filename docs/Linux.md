@@ -19,6 +19,16 @@ echo function_graph > current_tracer
 echo 1 > tracing_on
 ```
 
+### sourcegraph
+```shell
+docker run -d --publish 7080:7080 --publish 127.0.0.1:3370:3370 --name sg --restart=always --volume ~/.sourcegraph/config:/etc/sourcegraph --volume ~/.sourcegraph/data:/var/opt/sourcegraph sourcegraph/server:3.23.0
+
+curl -L https://sourcegraph.com/.api/src-cli/src_linux_amd64 -o /usr/local/bin/src
+
+chmod +x /usr/local/bin/src
+
+nohup src serve-git >> /dev/null  $2>1 &
+```
 ### Ovirt
 
 agent,https://computingforgeeks.com/install-ovirt-guest-agent-linux/

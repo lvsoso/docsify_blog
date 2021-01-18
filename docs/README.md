@@ -11,3 +11,7 @@
 [Linux](/Linux)
 
 [image](/image)
+
+[Rust](./rust)
+
+[Go](./go)

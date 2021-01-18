@@ -5,3 +5,5 @@
 * [Sheet](sheet.md)
 * [Linux](./Linux.md)
 * [Image](./image.md)
+* [Rust](./rust.md)
+* [Go](./go.md)
