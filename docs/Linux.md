@@ -1,3 +1,8 @@
+### libusb
+```shell
+sudo apt install libusb-dev libudev-dev
+```
+
 ```shell
 watch -n 1 "cat /proc/vmstat | grep dirty"
 

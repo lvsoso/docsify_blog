@@ -1,3 +1,41 @@
+减少体积
+
+编译
+```shell
+go build -ldflags="-s -w" -o server main.go
+go build -gcflags=-m -o server main.go
+```
+
+条件编译
+
+debug
+```go
+// +build debug
+```
+
+```shell
+go build -tags debug -o debug .
+```
+
+release
+```go
+// +build !debug
+```
+
+os版本
+```go
+// +build linux darwin
+// +build 386
+```
+
+[upx压缩](https://github.com/upx/upx/releases)
+```shell
+upx -9 server
+```
+
+
+
+测试
 ```shell
 go test -v ./ -test.run  
 ```
