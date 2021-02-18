@@ -22,7 +22,32 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted 
 # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
 ```
+### Terminator
+[https://blog.csdn.net/zhangkzz/article/details/90524066](https://blog.csdn.net/zhangkzz/article/details/90524066)
+[https://www.cnblogs.com/xiazh/articles/2407328.html](https://www.cnblogs.com/xiazh/articles/2407328.html)
 
+安装
+```shell
+sudo apt-get install terminator
+```
+
+快捷键
+```plaintext
+Ctrl+Shift+T	新建一个terminator窗口
+Ctrl+Shift+E	对terminator窗口垂直分割
+Ctrl+Shift+O	对terminator窗口水平分割
+Ctrl+Shift+W	关闭当前的terminator窗口
+Ctrl+Shift+I	另外创建一个新的terminator窗口
+Ctrl+Shift+N	在分割的不同窗口之间切换（向后）
+Ctrl+Shift+P	在分割的不同窗口之间切换（向前）
+Ctrl+Shift+T	新建一个Tab窗口
+Ctrl+Tab	切换下一个窗口
+Ctrl+Shift+T	新建一个terminator窗口
+Ctrl+Shift+F	当前terminator窗口进行搜索
+Ctrl+Shift+X	当前分割的窗口最大化
+Alt+A	将所有分割terminator同步
+Alt+O	关闭分割terminator同步
+```
 
 ### Git 
 
@@ -139,10 +164,34 @@ sudo yum-config-manager \
     
 sudo yum install -y  docker-ce docker-ce-cli containerd.io
 
+```
 
+### 拼音输入法
+[https://blog.csdn.net/wu10188/article/details/86540464](https://blog.csdn.net/wu10188/article/details/86540464)
+```shell
+sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
+im-config -s ibus
+sudo apt-get install ibus-pinyin
+sudo ibus-setup
+#有时候需要重启生效
 ```
 
 
+### C/C++ 编译基础
+
+```shell
+sudo apt-get install build-essential
+```
+
+### Rust 安装
+[https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
+
+```shell
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+### neovim
+[https://github.com/neovim/neovim](https://github.com/neovim/neovim)
 
 ### Proxychain-ng
 
@@ -162,14 +211,44 @@ docker build -f Dockerfile -t docsify/demo .
 docker run -itdp 3000:3000 --restart=always --name=docsify -v $(pwd):/docs docsify/demo
 ```
 
-### Kedconnect
+### Kdeconnect
 
 https://community.kde.org/KDEConnect#Linux_Desktop
 
 ```shell
-
+sudo apt-get install kdeconnect
 ```
 
 ### AppImageLauncher
 
 https://github.com/TheAssassin/AppImageLauncher
+
+#### Gnome Tweak
+
+浏览器插件：[chrome](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep),[firefox](https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/),[opera](https://addons.opera.com/en/extensions/details/gnome-shell-integration/)
+
+
+
+```shell
+sudo apt-get install gnome-tweaks
+```
+
+#### ssh-server
+
+```shell
+sudo apt-get install openssh-server
+```
+
+#### cmake
+
+```shell
+sudo apt install cmake
+```
+
+#### go dlv
+[https://github.com/go-delve/delve/blob/master/Documentation/installation/linux/install.md](https://github.com/go-delve/delve/blob/master/Documentation/installation/linux/install.md)
+```shell
+git clone https://github.com/go-delve/delve.git $GOPATH/src/github.com/go-delve/delve
+cd $GOPATH/src/github.com/go-delve/delve
+make install
+```

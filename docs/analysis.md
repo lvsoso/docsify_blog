@@ -1,6 +1,19 @@
-### 测试和分析
+## 测试和分析
 
-### 
+### 速度
+
+[https://formulusblack.com/blog/compute-performance-distance-of-data-as-a-measure-of-latency/](https://formulusblack.com/blog/compute-performance-distance-of-data-as-a-measure-of-latency/)
+
+1. Computer Time in Human Terms
+
+   ![](https://formulusblack.com/wp-content/uploads/2019/02/Screen-Shot-2019-02-01-at-12.16.39-PM.png)
+
+2. Computer Latency in Human Terms
+
+   ![](https://formulusblack.com/wp-content/uploads/2019/02/Screen-Shot-2019-02-01-at-12.17.22-PM.png)
+
+
+### 硬件信息
 
 ```shell
 # 查看所有硬件摘要信息
@@ -41,7 +54,6 @@ df -h
 ```
 
 
-
 #### /dev/shm 目录
 
 默认最大为内存的一半大小。
@@ -53,10 +65,7 @@ mount -o size=1500M -o nr_inodes=1000000 -o noatime,nodiratime -o remount /dev/s
 ```
 
 
-
-
-
-### SSD和HDD区分
+#### SSD和HDD区分
 
 ```shell
 # 0  为 SSD
@@ -93,7 +102,7 @@ sudo hdparm -tT /dev/sda
 sudo hdparm -I /dev/sda
 ```
 
-### dd
+#### dd
 
 ```shell
 # 内部存储 写
@@ -119,7 +128,7 @@ dd if=/tmp/tempfile of=/dev/null bs=1M count=1024
 
 
 
-### hdparm
+#### hdparm
 
 ```shell
 # 查看硬盘信息
@@ -139,4 +148,23 @@ sudo hdparm -tT /dev/sdb
  Timing buffered disk reads: 580 MB in  3.00 seconds = 193.22 MB/sec
 
 ```
+
+#### ipc-bench
+1. Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+2. Ubuntu 20.04.2 LTS
+3. 1000000 count
+
+| Method                | 512 Byte Message | 1 Killo Byte Message |
+| --------------------- | ---------------- | -------------------- |
+| Unix Signals          |                  |                      |
+| zeromq                |                  |                      |
+| Internet sockets(TCP) | 84722	msg/s   | 84956	msg/s       |
+| Domain sockets        | 176205	msg/s  | 178230	msg/s      |
+| Pipes                 | 147594	msg/s  | 147498	msg/s      |
+| Message Queues        | 189353	msg/s  | 177376	msg/s      |
+| FIFOs (named pipes)   | 136835	msg/s  | 128956	msg/s      |
+| Shared Memory         | 1863726	msg/s | 1476959	msg/s     |
+| Memory-Mapped Files   | 1988749	msg/s | 1648491	msg/s     |
+
+
 
