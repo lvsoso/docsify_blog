@@ -252,3 +252,21 @@ git clone https://github.com/go-delve/delve.git $GOPATH/src/github.com/go-delve/
 cd $GOPATH/src/github.com/go-delve/delve
 make install
 ```
+
+#### jetbrain 中文输入
+大致路径：/home/lv/.local/share/JetBrains/Toolbox/apps/Goland/ch-0/203.7148.71/bin/
+
+
+ibus
+```shell
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+```
+
+fcitx
+```shell
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+```
