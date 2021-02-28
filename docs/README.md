@@ -8,6 +8,8 @@
 
 [Go](./go)
 
+[Fix](./fix)
+
 [GoTest](./go_test)
 
 [guide](/guide)
@@ -15,6 +17,8 @@
 [image](/image)
 
 [Linux](/Linux)
+
+[Marp](/marp)
 
 [Rust](./rust)
 
