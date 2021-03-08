@@ -19,3 +19,27 @@
 ![](./img/2021-02-26-10-53-58.png)
 
 
+### dmidecode
+
+```shell
+# 查看内存信息
+dmidecode
+
+
+# 查看服务器型号、序列号
+dmidecode|grep "System Information" -A9|egrep  "Manufacturer|Product|Serial"  
+
+
+# 查看内存插槽、已使用插槽数、每根内存多大
+dmidecode|grep -A5 "Memory Device"|grep Size|grep -v Range
+
+# 查看内存频率
+dmidecode|grep -A16 "Memory Device"|grep 'Speed'
+
+
+# 内存型号
+dmidecode -t memory
+
+# 主板型号
+dmidecode |grep -A16 "System Information$"
+```
