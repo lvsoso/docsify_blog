@@ -113,4 +113,3 @@ sudo apt-get install virt-manager
  1796  history
 
 ```
-

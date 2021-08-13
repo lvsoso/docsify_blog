@@ -37,3 +37,44 @@ jpegoptim --size=400kb filename.jpg
 optipng filename.png
 ```
 
+### icon 和 字体
+
+[https://www.iconfont.cn/](https://www.iconfont.cn/)
+
+### GIMP
+[https://flatpak.org/setup/Ubuntu/](https://flatpak.org/setup/Ubuntu/)
+
+```shell
+sudo apt install flatpak
+```
+Or
+```shell
+sudo add-apt-repository ppa:alexlarsson/flatpak
+sudo apt update
+sudo apt install flatpak
+```
+
+[https://www.gimp.org/](https://www.gimp.org/)
+
+```shell
+flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+```
+
+### inkscape
+
+[https://inkscape.org](https://inkscape.org)
+
+### mypaint
+![](./img/2021-03-03-09-40-29.png)
+
+[https://github.com/mypaint/mypaint](https://github.com/mypaint/mypaint)
+
+### darktable
+
+![](./img/2021-03-03-09-52-37.png)
+[https://www.darktable.org/](https://www.darktable.org/)
+
+
+```shell
+sudo apt-get install darktable
+```

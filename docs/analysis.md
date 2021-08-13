@@ -6,11 +6,13 @@
 
 1. Computer Time in Human Terms
 
-   ![](https://formulusblack.com/wp-content/uploads/2019/02/Screen-Shot-2019-02-01-at-12.16.39-PM.png)
+![](./img/2021-02-26-10-52-01.png)
+
 
 2. Computer Latency in Human Terms
 
-   ![](https://formulusblack.com/wp-content/uploads/2019/02/Screen-Shot-2019-02-01-at-12.17.22-PM.png)
+
+![](./img/2021-02-26-10-53-58.png)
 
 
 ### 硬件信息
