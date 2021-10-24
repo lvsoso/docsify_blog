@@ -253,6 +253,18 @@ cd $GOPATH/src/github.com/go-delve/delve
 make install
 ```
 
+#### go todo
+```shell
+go get github.com/mattn/todo
+```
+
+#### go 文档工具
+```shell
+git clone https://github.com/go101/golds.git
+cd golds
+go install
+```
+
 #### jetbrain 中文输入
 大致路径：/home/lv/.local/share/JetBrains/Toolbox/apps/Goland/ch-0/203.7148.71/bin/
 
@@ -269,4 +281,24 @@ fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
+```
+
+#### ubutu（微信、QQ、腾讯会议）wine
+
+```shell
+wget -O- https://deepin-wine.i-m.dev/setup.sh | sh
+
+sudo apt-get install com.qq.weixin.deepin
+sudo apt-get install  com.tencent.meeting.deepin
+```
+
+[https://my.oschina.net/frank1126/blog/4947220](https://my.oschina.net/frank1126/blog/4947220)
+[https://github.com/zq1997/deepin-wine](https://github.com/zq1997/deepin-wine)
+
+
+### reveal.js
+
+```shell
+git clone https://github.com/hakimel/reveal.js.git
+cd reveal.js && npm install
 ```
