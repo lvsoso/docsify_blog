@@ -2,9 +2,10 @@
 
 * [Home](/) 
 * [Guide](guide.md "The greatest guide in the world")
+* [Git](git.md "Git instruction")
 * [Sheet](sheet.md)
 * [Linux](./Linux.md)
-* [Marp](./marp.md)]
+* [Marp](./marp.md)
 * [Image](./image.md)
 * [Rust](./rust.md)
 * [Go](./go.md)
@@ -14,7 +15,6 @@
 * [Docker](./docker.md)
 * [DockerImages](./docker_images.md)
 * [DockerCompose](./docker_compose.md)
-* [DockerCompose](./docker_compose.md)
 * [DockerExt](./docker_ext.md)
 * [Makefile](./makefile.md)
-* [go_coding.md](./go_coding.md)
+* [go_coding](./go_coding.md)
