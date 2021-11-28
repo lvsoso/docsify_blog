@@ -1,5 +1,51 @@
 ## docker
 
+### OCI
+- 镜像标准定义应用如何打包
+- 运行时标准定义如何解压应用包并运行
+- 分发标准定义如何分发容器镜像
+
+docker run xxx
+|   http
+daemon 
+|   grpc
+containerd
+|   
+shim
+|   
+runc
+
+### 网络
+- null 独立网络空间，不做任何网络配置
+- host 使用主机网络名空间，复用主机网络
+- container 重用其他容器的网络
+- bridge 使用linux网桥和iptables提供容器互联，docker0，veth pair
+- overlay  网络封包实现
+- remote underlay， overlay 
+### 文件
+
+**fs**
+
+- bootfs
+  - Bootloader
+  - kernel
+- rootfs
+
+docker 复用文件系统 rootfs，并设置“readonly” ，并在这个基础上进行叠加，设置权限，叠加...
+
+对于文件，写时复制（写的时候复制一份进行修改，不影响别的），用时分配（用得时候再分配空间）。
+
+**存储驱动**
+
+AUFS、OverlayFS、Device Mapper、Btrfs、ZFS
+
+**OverlayFS**
+
+upper 层和 lower 层,Lower 层代表镜像层,upper 层代表容器可写层。
+
+最上层merged层，对文件进行合并，形成合并的视图。
+
+
 ### 常用服务
 
 ```shell
